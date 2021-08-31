@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Hello"
-        view.backgroundColor = .red
+        view.backgroundColor = .darkGray
     }
     
 
