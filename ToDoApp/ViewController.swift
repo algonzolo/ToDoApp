@@ -10,6 +10,7 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var addBarButton: UIBarButtonItem!
     
     var todos = [ToDoList]()
      let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
@@ -28,7 +29,16 @@ class ViewController: UIViewController {
     
     // activate moving and delete cells
     @IBAction func activeMoveCell(_ sender: Any) {
-        tableView.isEditing = !tableView.isEditing
+        if tableView.isEditing{
+            tableView.setEditing(false, animated: true)
+//            sender.title = "Edit"
+            addBarButton.isEnabled = true
+            
+        } else {
+            tableView.setEditing(true, animated: true)
+//            sender.title = "Done"
+            addBarButton.isEnabled = false
+        }
     }
     
     
@@ -37,6 +47,7 @@ class ViewController: UIViewController {
     func getData(){
         do{
             todos = try context.fetch(ToDoList.fetchRequest())
+        
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }
@@ -44,6 +55,7 @@ class ViewController: UIViewController {
             print(error.localizedDescription)
         }
     }
+ 
     
 
 }
@@ -52,6 +64,7 @@ extension ViewController: UITableViewDelegate {
     
     override func viewDidAppear(_ animated: Bool) {
         getData()
+       
     }
     
     func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
@@ -74,10 +87,24 @@ extension ViewController: UITableViewDelegate {
     }
     
     
-    // allow moving cells
+    //MARK: allow moving cells
     func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
-        let todo = todos.remove(at: sourceIndexPath.row)
+        let todo = todos[sourceIndexPath.row]
+        todos.remove(at: sourceIndexPath.row)
         todos.insert(todo, at: destinationIndexPath.row)
+        
+//        for (index, element) in todos.enumerated() {
+//            element.index = Int16(index)
+//        }
+//
+//        do{
+//            try context.save()
+//            tableView.reloadData()
+//
+//        }catch{
+//            print(error.localizedDescription)
+//        }
+
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -110,11 +137,9 @@ extension ViewController: UITableViewDataSource {
         default:
             cell.titlelabel.text = "" + todo.title!
         }
-        
-        
-        
         return cell
     }
     
+
     
 }

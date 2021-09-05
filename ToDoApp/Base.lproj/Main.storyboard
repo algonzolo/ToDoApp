@@ -71,6 +71,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="addBarButton" destination="gIk-ss-NJi" id="PyL-yl-mb9"/>
                         <outlet property="tableView" destination="zxs-lx-LNn" id="Lc0-0i-drd"/>
                         <segue destination="Icj-OK-kYM" kind="show" identifier="editTask" id="4ML-sE-mfW"/>
                     </connections>

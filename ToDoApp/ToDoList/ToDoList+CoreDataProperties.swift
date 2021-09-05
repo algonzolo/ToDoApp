@@ -18,6 +18,7 @@ extension ToDoList {
 
     @NSManaged public var title: String?
     @NSManaged public var priority: Int32
+    @NSManaged public var index: Int16
 
 }
 
