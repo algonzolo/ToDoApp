@@ -22,7 +22,7 @@ class ViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
-        navigationController?.navigationBar.tintColor = .white
+        navigationController?.navigationBar.tintColor = .black
         
     }
     
@@ -104,7 +104,14 @@ extension ViewController: UITableViewDataSource {
         
         let todo = todos[indexPath.row]
         
-        cell.titlelabel.text = todo.title
+        switch todo.priority {
+        case 1:
+            cell.titlelabel.text = "❗️" + todo.title!
+        default:
+            cell.titlelabel.text = "" + todo.title!
+        }
+        
+        
         
         return cell
     }

@@ -58,13 +58,13 @@
                     </view>
                     <navigationItem key="navigationItem" title="TestToDoApp" id="wt3-WE-TmS">
                         <barButtonItem key="leftBarButtonItem" title="Item" image="pip.remove" catalog="system" id="JDK-Zo-C8r">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="activeMoveCell:" destination="BYZ-38-t0r" id="TG9-Bb-F9C"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Item" image="plus" catalog="system" id="gIk-ss-NJi">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <segue destination="Icj-OK-kYM" kind="show" identifier="addTask" id="Ex7-TE-pb1"/>
                             </connections>
@@ -90,7 +90,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bro, add new task" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gzu-oc-osW">
                                 <rect key="frame" x="136" y="148" width="142" height="21"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7PC-vA-DFU">
@@ -99,35 +99,55 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PTa-ZY-C15">
-                                <rect key="frame" x="153" y="253" width="108" height="60"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <rect key="frame" x="153" y="375" width="108" height="60"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="108" id="DCL-Pg-9g6"/>
-                                    <constraint firstAttribute="height" constant="60" id="NLi-JN-3Ra"/>
+                                    <constraint firstAttribute="width" constant="108" id="7uf-H3-HRw"/>
+                                    <constraint firstAttribute="height" constant="60" id="vOf-17-HYH"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                 <state key="normal" title="SAVE">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="saveButtonTapped:" destination="Icj-OK-kYM" eventType="touchUpInside" id="mUZ-IN-wEo"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Is this task important?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UAO-lG-gjh">
+                                <rect key="frame" x="105.5" y="256" width="203" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="696-Gg-6fr">
+                                <rect key="frame" x="20" y="302" width="374" height="32"/>
+                                <color key="backgroundColor" systemColor="systemGray3Color"/>
+                                <segments>
+                                    <segment title="No"/>
+                                    <segment title="Yes"/>
+                                </segments>
+                            </segmentedControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="NuR-rP-Poy"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
                             <constraint firstItem="Gzu-oc-osW" firstAttribute="centerX" secondItem="iAr-XX-wzi" secondAttribute="centerX" id="3UW-yD-dxp"/>
-                            <constraint firstItem="PTa-ZY-C15" firstAttribute="centerX" secondItem="iAr-XX-wzi" secondAttribute="centerX" id="L09-tF-jX6"/>
+                            <constraint firstItem="696-Gg-6fr" firstAttribute="leading" secondItem="NuR-rP-Poy" secondAttribute="leading" constant="20" id="MMn-V5-JmD"/>
+                            <constraint firstItem="PTa-ZY-C15" firstAttribute="centerX" secondItem="iAr-XX-wzi" secondAttribute="centerX" id="TBE-1Q-iRY"/>
                             <constraint firstItem="Gzu-oc-osW" firstAttribute="top" secondItem="NuR-rP-Poy" secondAttribute="top" constant="60" id="U9l-b4-MkN"/>
-                            <constraint firstItem="PTa-ZY-C15" firstAttribute="top" secondItem="7PC-vA-DFU" secondAttribute="bottom" constant="26" id="VQ8-F4-icf"/>
                             <constraint firstItem="7PC-vA-DFU" firstAttribute="top" secondItem="Gzu-oc-osW" secondAttribute="bottom" constant="24" id="bxC-Nx-RX3"/>
+                            <constraint firstItem="696-Gg-6fr" firstAttribute="top" secondItem="UAO-lG-gjh" secondAttribute="bottom" constant="22" id="fP5-W5-FYv"/>
+                            <constraint firstItem="UAO-lG-gjh" firstAttribute="centerX" secondItem="iAr-XX-wzi" secondAttribute="centerX" id="gsI-zm-jNg"/>
                             <constraint firstItem="7PC-vA-DFU" firstAttribute="leading" secondItem="NuR-rP-Poy" secondAttribute="leading" constant="20" id="hoJ-aD-TJu"/>
+                            <constraint firstItem="UAO-lG-gjh" firstAttribute="top" secondItem="7PC-vA-DFU" secondAttribute="bottom" constant="29" id="jbP-rs-5Yf"/>
+                            <constraint firstItem="PTa-ZY-C15" firstAttribute="top" secondItem="696-Gg-6fr" secondAttribute="bottom" constant="42" id="lqg-eq-nrH"/>
+                            <constraint firstItem="NuR-rP-Poy" firstAttribute="trailing" secondItem="696-Gg-6fr" secondAttribute="trailing" constant="20" id="sri-OH-Qvp"/>
                             <constraint firstItem="NuR-rP-Poy" firstAttribute="trailing" secondItem="7PC-vA-DFU" secondAttribute="trailing" constant="20" id="xv8-PF-mW4"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="x1s-Ku-EOc"/>
                     <connections>
+                        <outlet property="segmentedControl" destination="696-Gg-6fr" id="hoo-2Q-E89"/>
                         <outlet property="textField" destination="7PC-vA-DFU" id="cKM-Fm-znq"/>
                     </connections>
                 </viewController>
@@ -162,6 +182,12 @@
         <image name="plus" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray3Color">
+            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -11,8 +11,12 @@ import CoreData
 class AddTaskViewController: UIViewController {
 
     @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak var segmentedControl: UISegmentedControl!
     
+    var selectedPriority: ToDoList?
     var selectedIndex: ToDoList?
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +32,6 @@ class AddTaskViewController: UIViewController {
     
     @IBAction func saveButtonTapped(_ sender: Any) {
         
-        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         
         if selectedIndex == nil {
             
@@ -36,6 +39,7 @@ class AddTaskViewController: UIViewController {
             
             let newTask = ToDoList(context: context)
             newTask.title = textField.text
+            newTask.priority = Int32(segmentedControl.selectedSegmentIndex)
             
             do {
                 try context.save()
@@ -55,6 +59,7 @@ class AddTaskViewController: UIViewController {
                     let note = result as! ToDoList
                     if note == selectedIndex{
                         note.title = textField.text
+                        note.priority = Int32(segmentedControl.selectedSegmentIndex)
                         try context.save()
                         navigationController?.popViewController(animated: true)
                     }
@@ -65,6 +70,5 @@ class AddTaskViewController: UIViewController {
         }
     }
     
-   
 
 }
