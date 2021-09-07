@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7B4B515A26E52AA2003BE1A4 /* ToDoList+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4B515826E52AA2003BE1A4 /* ToDoList+CoreDataClass.swift */; };
-		7B4B515B26E52AA2003BE1A4 /* ToDoList+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4B515926E52AA2003BE1A4 /* ToDoList+CoreDataProperties.swift */; };
+		7BB0E31A26E7F5D70010B62E /* Checkbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB0E31926E7F5D70010B62E /* Checkbox.swift */; };
+		7BB0E31F26E80CAE0010B62E /* ToDoList+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB0E31D26E80CAD0010B62E /* ToDoList+CoreDataClass.swift */; };
+		7BB0E32026E80CAE0010B62E /* ToDoList+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB0E31E26E80CAE0010B62E /* ToDoList+CoreDataProperties.swift */; };
 		7BE9827526E4A660007B84AB /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE9827426E4A660007B84AB /* AddTaskViewController.swift */; };
 		7BE9827826E4A675007B84AB /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE9827726E4A675007B84AB /* CustomTableViewCell.swift */; };
 		ABC9FE1626DCC78F00D60EE0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC9FE1526DCC78F00D60EE0 /* AppDelegate.swift */; };
@@ -21,8 +22,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		7B4B515826E52AA2003BE1A4 /* ToDoList+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ToDoList+CoreDataClass.swift"; sourceTree = "<group>"; };
-		7B4B515926E52AA2003BE1A4 /* ToDoList+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ToDoList+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		7BB0E31926E7F5D70010B62E /* Checkbox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checkbox.swift; sourceTree = "<group>"; };
+		7BB0E31D26E80CAD0010B62E /* ToDoList+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ToDoList+CoreDataClass.swift"; sourceTree = "<group>"; };
+		7BB0E31E26E80CAE0010B62E /* ToDoList+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ToDoList+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		7BE9827426E4A660007B84AB /* AddTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
 		7BE9827726E4A675007B84AB /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		ABC9FE1226DCC78F00D60EE0 /* ToDoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,11 +49,11 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		7B4B515D26E52AAA003BE1A4 /* ToDoList */ = {
+		7BB0E32226E80CB40010B62E /* ToDoList */ = {
 			isa = PBXGroup;
 			children = (
-				7B4B515826E52AA2003BE1A4 /* ToDoList+CoreDataClass.swift */,
-				7B4B515926E52AA2003BE1A4 /* ToDoList+CoreDataProperties.swift */,
+				7BB0E31D26E80CAD0010B62E /* ToDoList+CoreDataClass.swift */,
+				7BB0E31E26E80CAE0010B62E /* ToDoList+CoreDataProperties.swift */,
 			);
 			path = ToDoList;
 			sourceTree = "<group>";
@@ -75,12 +77,13 @@
 		ABC9FE1426DCC78F00D60EE0 /* ToDoApp */ = {
 			isa = PBXGroup;
 			children = (
-				7B4B515D26E52AAA003BE1A4 /* ToDoList */,
+				7BB0E32226E80CB40010B62E /* ToDoList */,
 				ABC9FE1526DCC78F00D60EE0 /* AppDelegate.swift */,
 				ABC9FE1726DCC78F00D60EE0 /* SceneDelegate.swift */,
 				ABC9FE1926DCC78F00D60EE0 /* ViewController.swift */,
 				7BE9827426E4A660007B84AB /* AddTaskViewController.swift */,
 				7BE9827726E4A675007B84AB /* CustomTableViewCell.swift */,
+				7BB0E31926E7F5D70010B62E /* Checkbox.swift */,
 				ABC9FE1B26DCC78F00D60EE0 /* Main.storyboard */,
 				ABC9FE2126DCC79000D60EE0 /* Assets.xcassets */,
 				ABC9FE2326DCC79100D60EE0 /* LaunchScreen.storyboard */,
@@ -162,12 +165,13 @@
 			files = (
 				7BE9827826E4A675007B84AB /* CustomTableViewCell.swift in Sources */,
 				ABC9FE1A26DCC78F00D60EE0 /* ViewController.swift in Sources */,
+				7BB0E31A26E7F5D70010B62E /* Checkbox.swift in Sources */,
 				ABC9FE1626DCC78F00D60EE0 /* AppDelegate.swift in Sources */,
-				7B4B515B26E52AA2003BE1A4 /* ToDoList+CoreDataProperties.swift in Sources */,
 				ABC9FE1826DCC78F00D60EE0 /* SceneDelegate.swift in Sources */,
+				7BB0E31F26E80CAE0010B62E /* ToDoList+CoreDataClass.swift in Sources */,
 				ABC9FE2026DCC78F00D60EE0 /* ToDoApp.xcdatamodeld in Sources */,
-				7B4B515A26E52AA2003BE1A4 /* ToDoList+CoreDataClass.swift in Sources */,
 				7BE9827526E4A660007B84AB /* AddTaskViewController.swift in Sources */,
+				7BB0E32026E80CAE0010B62E /* ToDoList+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

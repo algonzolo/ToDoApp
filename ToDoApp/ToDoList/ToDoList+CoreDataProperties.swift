@@ -2,7 +2,7 @@
 //  ToDoList+CoreDataProperties.swift
 //  ToDoApp
 //
-//  Created by Paul James on 05.09.2021.
+//  Created by Paul James on 08.09.2021.
 //
 //
 
@@ -16,9 +16,10 @@ extension ToDoList {
         return NSFetchRequest<ToDoList>(entityName: "ToDoList")
     }
 
-    @NSManaged public var title: String?
-    @NSManaged public var priority: Int32
     @NSManaged public var index: Int16
+    @NSManaged public var priority: Int32
+    @NSManaged public var title: String?
+    @NSManaged public var completed: Bool
 
 }
 

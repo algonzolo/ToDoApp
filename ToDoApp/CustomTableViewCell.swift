@@ -11,17 +11,30 @@ class CustomTableViewCell: UITableViewCell {
 
     
     @IBOutlet weak var titlelabel: UILabel!
+    @IBOutlet weak var checkbox: Checkbox!
+    
+    @IBAction func checked(_ sender: Any) {
+    }
+    
+    func setCell(title: String, checked: Bool){
+        titlelabel.text = title
+        checkbox.checked = checked
+        updateChecked()
+    }
     
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
+    func updateChecked(){
+        let attributeString = NSMutableAttributedString(string: titlelabel.text!)
+        
+        if checkbox.checked {
+            attributeString.addAttribute(.strikethroughStyle, value: 2, range: NSMakeRange(0, attributeString.length-1))
+        } else {
+            attributeString.removeAttribute(.strikethroughStyle, range: NSMakeRange(0, attributeString.length-1))
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+        }
+        
+        titlelabel.attributedText = attributeString
     }
+  
 
 }

@@ -28,19 +28,33 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yQD-iD-NkW">
-                                                    <rect key="frame" x="20" y="11.5" width="374" height="21"/>
+                                                    <rect key="frame" x="20" y="11.5" width="336" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a9A-n7-5k7" customClass="Checkbox" customModule="ToDoApp" customModuleProvider="target">
+                                                    <rect key="frame" x="364" y="7" width="30" height="30"/>
+                                                    <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="Wfl-Tu-n2A"/>
+                                                        <constraint firstAttribute="width" constant="30" id="a33-cv-oUh"/>
+                                                    </constraints>
+                                                    <connections>
+                                                        <action selector="checked:" destination="Klp-QK-rTu" eventType="valueChanged" id="Eic-ng-YLi"/>
+                                                    </connections>
+                                                </view>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="yQD-iD-NkW" firstAttribute="leading" secondItem="BhE-cM-pO9" secondAttribute="leadingMargin" id="aJZ-oR-4WD"/>
-                                                <constraint firstItem="yQD-iD-NkW" firstAttribute="centerY" secondItem="BhE-cM-pO9" secondAttribute="centerY" id="iBV-cF-gD9"/>
-                                                <constraint firstItem="yQD-iD-NkW" firstAttribute="trailing" secondItem="BhE-cM-pO9" secondAttribute="trailingMargin" id="lHP-k5-kUk"/>
+                                                <constraint firstItem="yQD-iD-NkW" firstAttribute="centerY" secondItem="BhE-cM-pO9" secondAttribute="centerY" id="FSf-Z9-f4u"/>
+                                                <constraint firstItem="a9A-n7-5k7" firstAttribute="leading" secondItem="yQD-iD-NkW" secondAttribute="trailing" constant="8" symbolic="YES" id="IdK-Lf-0is"/>
+                                                <constraint firstItem="yQD-iD-NkW" firstAttribute="leading" secondItem="BhE-cM-pO9" secondAttribute="leading" constant="20" symbolic="YES" id="QQt-jx-ap0"/>
+                                                <constraint firstAttribute="trailing" secondItem="a9A-n7-5k7" secondAttribute="trailing" constant="20" symbolic="YES" id="WJI-ZS-hx0"/>
+                                                <constraint firstItem="a9A-n7-5k7" firstAttribute="centerY" secondItem="BhE-cM-pO9" secondAttribute="centerY" id="bOg-fp-3B7"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="checkbox" destination="a9A-n7-5k7" id="ecG-IJ-OyQ"/>
                                             <outlet property="titlelabel" destination="yQD-iD-NkW" id="YBH-1y-uoB"/>
                                         </connections>
                                     </tableViewCell>
@@ -189,6 +203,9 @@
         </systemColor>
         <systemColor name="systemGray6Color">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
