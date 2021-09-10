@@ -131,17 +131,11 @@ extension ViewController: UITableViewDataSource {
         
         let todo = todos[indexPath.row]
         
-        //MARK: надо акивировать метод из customTVcell - инициализировав здесь cell. Подумать как это сделать
-        
         switch todo.priority {
         case 1:
-            cell.titlelabel.text = "❗️" + todo.title!
-            cell.checkbox.checked = todo.completed
+            cell.setCell(title: "❗️" + todo.title!, checked: todo.completed)
         default:
-            cell.titlelabel.text = "" + todo.title!
-            cell.checkbox.checked = todo.completed
-            
-            
+            cell.setCell(title: todo.title!, checked: todo.completed)
         }
         return cell
     }
