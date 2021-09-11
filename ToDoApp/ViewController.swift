@@ -23,6 +23,8 @@ class ViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
+        view.backgroundColor = .red
+        
         navigationController?.navigationBar.tintColor = .black
         
     }
